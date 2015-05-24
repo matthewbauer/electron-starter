@@ -28,8 +28,6 @@ module.exports = (grunt) ->
           prune: true
           asar: true
           icon: '<%= app.icns %>'
-          'app-bundle-id': 'com.gametime'
-          'helper-bundle-id': 'com.gametime.helper'
           'app-version': '<%= pkg.version %>'
       'win32-ia32':
         options:
@@ -79,16 +77,9 @@ module.exports = (grunt) ->
         expand: true
     appdmg:
       options:
-        title: 'GameTime'
         icon: 'resources/mac/app.icns'
         background: 'resources/mac/bg.png'
         'icon-size': 80
-        contents: [
-          {x: 448, y: 344, type: 'link', path: '/Applications'}
-          {x: 192, y: 344, type: 'file', path: '<%= app.dist %>/GameTime.app'}
-        ]
-      target:
-        dest: '<%= app.dist %>/GameTime.dmg'
     cson:
       app:
         expand: true
