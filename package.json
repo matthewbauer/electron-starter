@@ -1,6 +1,6 @@
 {
   "name": "electron-starter",
-  "productName": "GameTime",
+  "productName": "Electron Starter",
   "version": "0.7.0",
   "description": "Like Popcorn-Time but for games.",
   "main": "./index.js",
